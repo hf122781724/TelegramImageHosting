@@ -1,0 +1,15 @@
+name = "cf-tg-imagebed"
+main = "src/index.js"
+compatibility_date = "2025-08-01"
+workers_dev = true
+
+# 图片宽高上限：超过任一边长直接返回错误，0 表示不限制
+[vars]
+MAX_WIDTH = "1920"
+MAX_HEIGHT = "1920"
+# 单文件上限（字节），默认 20MB = 20971520，可按需调小，例如 10485760 = 10MB
+# MAX_BYTES = "10485760"
+
+# BOT_TOKEN、CHAT_ID 通过 wrangler secret put 写入，不要写在这里：
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put CHAT_ID
